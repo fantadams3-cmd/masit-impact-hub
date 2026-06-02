@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/masit-logo.jpg.asset.json";
 
 const links = [
   { to: "/", label: "Accueil" },
@@ -15,12 +16,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between container-px">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground font-display font-bold">
-            M
-          </span>
+        <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          <img
+            src={logo.url}
+            alt="MASIT Consulting"
+            className="h-10 w-10 rounded-md object-contain bg-white ring-1 ring-border"
+          />
           <span className="font-display text-base font-bold tracking-tight">
-            MASIT <span className="text-muted-foreground font-medium">CONSULTING</span>
+            MASIT <span className="text-[color:var(--gold)] font-bold">CONSULTING</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
