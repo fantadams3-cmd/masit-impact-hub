@@ -1,15 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
+import logo from "@/assets/masit-logo.jpg.asset.json";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl container-px py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-md bg-gold text-gold-foreground font-display font-bold">
-              M
-            </span>
+          <div className="flex items-center gap-2.5">
+            <img src={logo.url} alt="MASIT Consulting" className="h-10 w-10 rounded-md object-contain bg-white" />
             <span className="font-display text-base font-bold">MASIT CONSULTING</span>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/70">
