@@ -23,7 +23,7 @@ export function Header() {
             className="h-10 w-10 rounded-md object-contain bg-white ring-1 ring-border"
           />
           <span className="font-display text-base font-bold tracking-tight">
-            MASIT <span className="text-[color:var(--gold)] font-bold">CONSULTING</span>
+            MASIT <span className="text-burgundy font-bold">CONSULTING</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
