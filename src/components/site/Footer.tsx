@@ -29,8 +29,8 @@ export function Footer() {
           <h4 className="font-display text-sm font-semibold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-primary-foreground/70">
             <li className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 text-gold" /> Conakry, Guinée</li>
-            <li className="flex items-start gap-2"><Mail size={16} className="mt-0.5 text-gold" /> contact@masitconsulting.com</li>
-            <li className="flex items-start gap-2"><Phone size={16} className="mt-0.5 text-gold" /> +224 000 000 000</li>
+            <li className="flex items-start gap-2"><Mail size={16} className="mt-0.5 text-gold" /> contact@masitconsulting.net</li>
+            <li className="flex items-start gap-2"><Phone size={16} className="mt-0.5 text-gold" /> +224 620 41 82 95</li>
           </ul>
         </div>
       </div>

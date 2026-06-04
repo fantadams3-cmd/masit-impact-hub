@@ -44,7 +44,7 @@ function Contact() {
     // Open mail client as a graceful fallback (no backend yet)
     const { name, email, subject, message } = result.data;
     const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:contact@masitconsulting.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = `mailto:contact@masitconsulting.net?subject=${encodeURIComponent(subject)}&body=${body}`;
     setStatus("sent");
     (e.target as HTMLFormElement).reset();
   }
@@ -95,13 +95,13 @@ function Contact() {
           <aside className="space-y-4">
             <InfoCard icon={MapPin} title="Adresse">Conakry, Guinée</InfoCard>
             <InfoCard icon={Mail} title="Email">
-              <a href="mailto:contact@masitconsulting.com" className="hover:text-gold">contact@masitconsulting.com</a>
+              <a href="mailto:contact@masitconsulting.net" className="hover:text-gold">contact@masitconsulting.net</a>
             </InfoCard>
             <InfoCard icon={Phone} title="Téléphone">
-              <a href="tel:+224000000000" className="hover:text-gold">+224 000 000 000</a>
+              <a href="tel:+224620418295" className="hover:text-gold">+224 620 41 82 95</a>
             </InfoCard>
             <a
-              href="https://wa.me/224000000000"
+              href="https://wa.me/224620418295"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-xl bg-[#25D366] p-5 text-white shadow-card-soft hover:opacity-95"
