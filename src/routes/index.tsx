@@ -25,8 +25,55 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <SiteLayout>
+      {/* MOT DU FONDATEUR — opening */}
+      <section className="relative overflow-hidden bg-burgundy-gradient text-primary-foreground">
+        <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-gold/20 blur-3xl" aria-hidden />
+        <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-burgundy/40 blur-3xl" aria-hidden />
+        <div className="relative mx-auto max-w-7xl container-px py-16 md:py-24 grid gap-12 md:grid-cols-[0.85fr_1.15fr] items-center">
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-3xl bg-gold-gradient opacity-25 blur-2xl" aria-hidden />
+            <div className="relative overflow-hidden rounded-2xl ring-1 ring-gold/40 shadow-elegant">
+              <img
+                src={founderImg}
+                alt="Fondateur & Gérant de MASIT Consulting"
+                width={1080}
+                height={1440}
+                className="h-full w-full object-cover aspect-[3/4]"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-burgundy/95 via-burgundy/40 to-transparent p-5">
+                <div className="text-xs uppercase tracking-widest text-gold">Fondateur & Gérant</div>
+                <div className="font-display text-lg font-semibold">MASIT Consulting</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-xs font-medium text-gold backdrop-blur">
+              <Quote size={14} /> Le mot du Fondateur
+            </span>
+            <h2 className="mt-5 font-display text-3xl md:text-5xl font-bold leading-tight text-balance">
+              « Mettre l'expertise et l'innovation
+              <span className="block bg-gold-gradient bg-clip-text text-transparent">au service de l'Afrique. »</span>
+            </h2>
+            <p className="mt-6 text-primary-foreground/85 leading-relaxed max-w-xl">
+              Chez MASIT Consulting, nous croyons qu'une Afrique performante se construit par des
+              organisations bien outillées, des dirigeants bien accompagnés et des équipes bien
+              formées. Nous mettons notre rigueur, notre exigence et notre passion au service de
+              votre transformation — avec un engagement total à vos côtés.
+            </p>
+            <div className="mt-8 flex items-center gap-4">
+              <div className="h-px w-12 bg-gold" />
+              <div>
+                <div className="font-display text-lg font-semibold">Le Fondateur</div>
+                <div className="text-sm text-primary-foreground/70">Conakry · Guinée</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* HERO — image-led split */}
       <section className="relative overflow-hidden">
+
         <div className="absolute inset-0 bg-hero" aria-hidden />
         <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-gold/20 blur-3xl" aria-hidden />
         <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-burgundy/30 blur-3xl" aria-hidden />
