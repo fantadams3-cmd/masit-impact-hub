@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Sparkles, Quote } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import founderImg from "@/assets/founder.jpg";
 import poleConseil from "@/assets/pole-conseil.jpg";
 import poleFormation from "@/assets/pole-formation.jpg";
 import { SiteLayout } from "@/components/site/Layout";
