@@ -88,7 +88,9 @@ function Home() {
               <span className="block bg-gold-gradient bg-clip-text text-transparent">en Guinée</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-primary-foreground/85 text-balance">
-              Accompagner les organisations dans leur transformation digitale et leur performance —
+              Tout pour votre entreprise : <span className="text-gold font-semibold">technologie</span>,
+              accompagnement, <span className="text-gold font-semibold">gestion & audit</span>,
+              <span className="text-gold font-semibold"> solutions IA</span>, formation et conseil —
               avec rigueur, innovation et impact.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
