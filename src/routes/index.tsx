@@ -151,6 +151,22 @@ function Home() {
         </div>
       </section>
 
+      {/* PARTNER BAND — Devex */}
+      <section className="relative border-y border-border bg-cream/50">
+        <div className="mx-auto max-w-7xl container-px py-8 md:py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center rounded-full bg-burgundy/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-burgundy">
+              Partenariat
+            </span>
+            <p className="font-display text-base md:text-lg font-semibold">
+              En collaboration avec <span className="text-burgundy">Devex</span> — entreprise spécialisée en sondage & études terrain.
+            </p>
+          </div>
+          <span className="text-xs text-muted-foreground">Données fiables · Insights actionnables</span>
+        </div>
+      </section>
+
+
       {/* POLES — image-rich cards */}
       <section className="relative">
         <div className="mx-auto max-w-7xl container-px py-20 md:py-28">
