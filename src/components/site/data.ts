@@ -7,18 +7,6 @@ import poleConseil from "@/assets/pole-conseil.jpg";
 
 export const poles = [
   {
-    icon: Brain,
-    title: "Intelligence Artificielle",
-    tag: "Pôle IA",
-    image: poleAi,
-    items: [
-      "AI for Education",
-      "Automatisation des processus",
-      "Solutions IA pour entreprises",
-      "Formation en IA générative",
-    ],
-  },
-  {
     icon: Code2,
     title: "Numérique & Technologie",
     tag: "Pôle Tech",
@@ -31,15 +19,15 @@ export const poles = [
     ],
   },
   {
-    icon: GraduationCap,
-    title: "Formation",
-    tag: "Pôle Formation",
-    image: poleFormation,
+    icon: Brain,
+    title: "Intelligence Artificielle",
+    tag: "Pôle IA",
+    image: poleAi,
     items: [
-      "Google Workspace",
-      "Bureautique et productivité",
-      "IA et outils numériques",
-      "Renforcement de capacités",
+      "AI for Education",
+      "Automatisation des processus",
+      "Solutions IA pour entreprises",
+      "Formation en IA générative",
     ],
   },
   {
@@ -64,6 +52,18 @@ export const poles = [
       "Business Development",
       "Project Implementation",
       "Accompagnement PME / ONG / écoles",
+    ],
+  },
+  {
+    icon: GraduationCap,
+    title: "Formation",
+    tag: "Pôle Formation",
+    image: poleFormation,
+    items: [
+      "Google Workspace",
+      "Bureautique et productivité",
+      "IA et outils numériques",
+      "Renforcement de capacités",
     ],
   },
 ] as const;
