@@ -76,4 +76,4 @@ export const poles: readonly Pole[] = [
       "Renforcement de capacités",
     ],
   },
-] as const;
+];
