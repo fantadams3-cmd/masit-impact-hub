@@ -5,7 +5,16 @@ import poleFormation from "@/assets/pole-formation.jpg";
 import poleAudit from "@/assets/pole-audit.jpg";
 import poleConseil from "@/assets/pole-conseil.jpg";
 
-export const poles = [
+type Pole = {
+  icon: typeof Code2;
+  title: string;
+  tag: string;
+  image: string;
+  href?: string;
+  items: readonly string[];
+};
+
+export const poles: readonly Pole[] = [
   {
     icon: Code2,
     title: "Numérique & Technologie",
