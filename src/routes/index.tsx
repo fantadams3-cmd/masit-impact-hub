@@ -222,7 +222,7 @@ function Home() {
               const className =
                 "group relative overflow-hidden rounded-2xl border border-border bg-card shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant";
               return href ? (
-                <Link key={title} to={href} className={className}>
+                <Link key={title} to={href as "/"} className={className}>
                   {card}
                 </Link>
               ) : (
