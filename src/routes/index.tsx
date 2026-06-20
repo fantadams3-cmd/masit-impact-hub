@@ -181,41 +181,56 @@ function Home() {
             </p>
           </div>
           <div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {poles.map(({ icon: Icon, title, tag, items, image }) => (
-              <article
-                key={title}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={image}
-                    alt={title}
-                    width={1280}
-                    height={896}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy/85 via-burgundy/20 to-transparent" />
-                  <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-cream/90 backdrop-blur px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-burgundy">
-                    {tag}
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
-                    <div className="grid h-11 w-11 place-items-center rounded-lg bg-gold-gradient text-gold-foreground shadow-gold">
-                      <Icon size={20} />
+            {poles.map(({ icon: Icon, title, tag, items, image, href }) => {
+              const card = (
+                <>
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={image}
+                      alt={title}
+                      width={1280}
+                      height={896}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-burgundy/85 via-burgundy/20 to-transparent" />
+                    <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-cream/90 backdrop-blur px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-burgundy">
+                      {tag}
                     </div>
-                    <h3 className="font-display text-xl font-bold text-primary-foreground">{title}</h3>
+                    {href && (
+                      <div className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-gold-gradient px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-gold-foreground shadow-gold">
+                        Voir nos références <ArrowRight size={12} />
+                      </div>
+                    )}
+                    <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+                      <div className="grid h-11 w-11 place-items-center rounded-lg bg-gold-gradient text-gold-foreground shadow-gold">
+                        <Icon size={20} />
+                      </div>
+                      <h3 className="font-display text-xl font-bold text-primary-foreground">{title}</h3>
+                    </div>
                   </div>
-                </div>
-                <ul className="p-6 space-y-2.5 text-sm text-muted-foreground">
-                  {items.map((i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-burgundy" />
-                      <span>{i}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+                  <ul className="p-6 space-y-2.5 text-sm text-muted-foreground">
+                    {items.map((i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-burgundy" />
+                        <span>{i}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              );
+              const className =
+                "group relative overflow-hidden rounded-2xl border border-border bg-card shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant";
+              return href ? (
+                <Link key={title} to={href as "/"} className={className}>
+                  {card}
+                </Link>
+              ) : (
+                <article key={title} className={className}>
+                  {card}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
