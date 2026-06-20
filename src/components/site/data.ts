@@ -47,6 +47,7 @@ export const poles = [
     title: "Conseil & Business",
     tag: "Pôle Conseil",
     image: poleConseil,
+    href: "/conseil-business",
     items: [
       "Études de marché (Market Research)",
       "Business Development",

@@ -13,6 +13,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as FormationsRouteImport } from './routes/formations'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ConseilBusinessRouteImport } from './routes/conseil-business'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -36,6 +37,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConseilBusinessRoute = ConseilBusinessRouteImport.update({
+  id: '/conseil-business',
+  path: '/conseil-business',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -50,6 +56,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/conseil-business': typeof ConseilBusinessRoute
   '/contact': typeof ContactRoute
   '/formations': typeof FormationsRoute
   '/portfolio': typeof PortfolioRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/conseil-business': typeof ConseilBusinessRoute
   '/contact': typeof ContactRoute
   '/formations': typeof FormationsRoute
   '/portfolio': typeof PortfolioRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/conseil-business': typeof ConseilBusinessRoute
   '/contact': typeof ContactRoute
   '/formations': typeof FormationsRoute
   '/portfolio': typeof PortfolioRoute
@@ -77,16 +86,25 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/conseil-business'
     | '/contact'
     | '/formations'
     | '/portfolio'
     | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/formations' | '/portfolio' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/conseil-business'
+    | '/contact'
+    | '/formations'
+    | '/portfolio'
+    | '/services'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/conseil-business'
     | '/contact'
     | '/formations'
     | '/portfolio'
@@ -96,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ConseilBusinessRoute: typeof ConseilBusinessRoute
   ContactRoute: typeof ContactRoute
   FormationsRoute: typeof FormationsRoute
   PortfolioRoute: typeof PortfolioRoute
@@ -132,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/conseil-business': {
+      id: '/conseil-business'
+      path: '/conseil-business'
+      fullPath: '/conseil-business'
+      preLoaderRoute: typeof ConseilBusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -152,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ConseilBusinessRoute: ConseilBusinessRoute,
   ContactRoute: ContactRoute,
   FormationsRoute: FormationsRoute,
   PortfolioRoute: PortfolioRoute,
@@ -160,13 +187,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
