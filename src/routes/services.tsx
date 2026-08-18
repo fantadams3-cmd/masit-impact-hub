@@ -27,7 +27,7 @@ function Services() {
             Une offre intégrée pour transformer votre organisation
           </h1>
           <p className="mt-6 max-w-2xl text-primary-foreground/80">
-            Cinq pôles complémentaires, mobilisés individuellement ou en synergie selon vos enjeux.
+            Sept pôles complémentaires — systèmes d’information, projets SI, management, applications, IA, audit et formation — mobilisés individuellement ou en synergie selon vos enjeux.
           </p>
         </div>
       </section>
@@ -41,7 +41,7 @@ function Services() {
             >
               <div>
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-gold">
-                  0{idx + 1} · {tag}
+                  {String(idx + 1).padStart(2, "0")} · {tag}
                 </span>
                 <div className="mt-4 grid h-14 w-14 place-items-center rounded-xl bg-primary text-primary-foreground">
                   <Icon size={26} />

@@ -10,8 +10,8 @@ import { poles } from "@/components/site/data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MASIT Consulting — Digital, IA, Audit & Formation en Guinée" },
-      { name: "description", content: "Cabinet de conseil basé à Conakry : transformation digitale, intelligence artificielle, audit, formation et accompagnement des PME, ONG et écoles." },
+      { title: "MASIT Consulting — Systèmes d’information, digital & gestion" },
+      { name: "description", content: "Cabinet de conseil à Conakry : systèmes d’information, déploiement de projets SI, applications, digitalisation, IA, gestion des PME et formation." },
       { property: "og:title", content: "MASIT Consulting — Digital, IA, Audit & Formation" },
       { property: "og:description", content: "Accompagner les organisations dans leur transformation digitale et leur performance." },
       { property: "og:image", content: heroImg },
@@ -81,17 +81,17 @@ function Home() {
         <div className="relative mx-auto max-w-7xl container-px py-20 md:py-28 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
           <div className="text-primary-foreground">
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-xs font-medium text-gold backdrop-blur">
-              <Sparkles size={14} /> Cabinet de conseil · Conakry, Guinée
+              <Sparkles size={14} /> Conseil, systèmes d'information & accompagnement · Conakry
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] text-balance md:text-6xl">
-              Digital, IA, Audit & Formation
-              <span className="block bg-gold-gradient bg-clip-text text-transparent">en Guinée</span>
+              Des solutions numériques et des systèmes d'information
+              <span className="block bg-gold-gradient bg-clip-text text-transparent">au service de votre performance</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-primary-foreground/85 text-balance">
-              Tout pour votre entreprise : <span className="text-gold font-semibold">technologie</span>,
-              accompagnement, <span className="text-gold font-semibold">gestion & audit</span>,
-              <span className="text-gold font-semibold"> solutions IA</span>, formation et conseil —
-              avec rigueur, innovation et impact.
+              Nous accompagnons les entreprises et organisations dans leurs
+              <span className="text-gold font-semibold"> projets numériques</span>, leurs
+              <span className="text-gold font-semibold"> systèmes d'information</span>, leur
+              <span className="text-gold font-semibold"> gestion</span> et le développement des compétences.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
@@ -109,7 +109,7 @@ function Home() {
             </div>
             <div className="mt-12 grid grid-cols-3 max-w-xl gap-6 border-t border-primary-foreground/15 pt-8">
               {[
-                { k: "5", v: "Pôles d'expertise" },
+                { k: "7", v: "Pôles d'expertise" },
                 { k: "50+", v: "Projets accompagnés" },
                 { k: "100%", v: "Engagement client" },
               ].map((s) => (
@@ -173,7 +173,8 @@ function Home() {
           <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">Nos pôles d'expertise</span>
             <h2 className="mt-3 font-display text-3xl font-bold md:text-5xl text-balance">
-              Cinq domaines, une exigence : <span className="text-burgundy">la performance</span> de nos clients
+              Digital · Systèmes d'information · Gestion · IA · Formation :
+              <span className="text-burgundy"> une exigence</span>, la performance de nos clients
             </h2>
             <p className="mt-4 text-muted-foreground">
               De la stratégie à l'implémentation, nous couvrons toute la chaîne de valeur pour PME,
@@ -232,6 +233,60 @@ function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* PME MESSAGE */}
+      <section className="relative border-y border-border bg-cream/60">
+        <div className="mx-auto max-w-5xl container-px py-16 md:py-20 text-center">
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-balance">
+            « Nous aidons les PME à mieux s'organiser, mieux gérer et
+            <span className="text-burgundy"> mieux utiliser le numérique</span>. »
+          </h2>
+          <p className="mt-5 text-muted-foreground max-w-3xl mx-auto">
+            De la formalisation de votre gestion financière à la mise en place de vos outils
+            numériques, MASIT Consulting vous accompagne dans la structuration et la transformation
+            de votre entreprise.
+          </p>
+        </div>
+      </section>
+
+      {/* END-TO-END PROCESS */}
+      <section className="relative">
+        <div className="mx-auto max-w-7xl container-px py-20 md:py-24">
+          <div className="max-w-2xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">
+              Un accompagnement de bout en bout
+            </span>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-balance">
+              De l'idée au <span className="text-burgundy">déploiement</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Un besoin ponctuel ou un projet informatique d'envergure : nous intervenons à chaque
+              étape, comme interlocuteur local et point focal de vos déploiements.
+            </p>
+          </div>
+          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { n: "1", t: "Analyser", d: "Comprendre vos besoins." },
+              { n: "2", t: "Conseiller", d: "Proposer une approche adaptée." },
+              { n: "3", t: "Concevoir", d: "Définir la solution." },
+              { n: "4", t: "Déployer", d: "Mettre en œuvre et coordonner." },
+              { n: "5", t: "Former", d: "Accompagner les utilisateurs." },
+              { n: "6", t: "Suivre", d: "Assurer l'assistance et l'amélioration." },
+            ].map((step) => (
+              <li
+                key={step.n}
+                className="relative rounded-2xl border border-border bg-card p-6 shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant"
+              >
+                <div className="grid h-11 w-11 place-items-center rounded-lg bg-gold-gradient font-display text-lg font-bold text-gold-foreground shadow-gold">
+                  {step.n}
+                </div>
+                <h3 className="mt-4 font-display text-lg font-bold">{step.t}</h3>
+                <p className="mt-1.5 text-sm text-muted-foreground">{step.d}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

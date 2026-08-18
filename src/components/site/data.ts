@@ -1,9 +1,11 @@
-import { Brain, Code2, GraduationCap, ClipboardCheck, Briefcase } from "lucide-react";
+import { Brain, Code2, GraduationCap, ClipboardCheck, Briefcase, Network, Building2 } from "lucide-react";
 import poleAi from "@/assets/pole-ai.jpg";
 import poleTech from "@/assets/pole-tech.jpg";
 import poleFormation from "@/assets/pole-formation.jpg";
 import poleAudit from "@/assets/pole-audit.jpg";
 import poleConseil from "@/assets/pole-conseil.jpg";
+import poleSi from "@/assets/pole-si.jpg";
+import poleManagement from "@/assets/pole-management.jpg";
 
 type Pole = {
   icon: typeof Code2;
@@ -17,14 +19,41 @@ type Pole = {
 export const poles: readonly Pole[] = [
   {
     icon: Code2,
-    title: "Numérique & Technologie",
+    title: "Solutions numériques & Applications",
     tag: "Pôle Tech",
     image: poleTech,
     items: [
-      "Développement de sites web",
-      "Développement d'applications",
-      "Transformation digitale",
-      "Solutions sur mesure",
+      "Applications web, mobiles et desktop",
+      "Applications métiers et logiciels de gestion",
+      "Bases de données, automatisation des processus",
+      "Tableaux de bord et reporting",
+      "Sites web et transformation digitale",
+    ],
+  },
+  {
+    icon: Network,
+    title: "Appui & Déploiement de Projets SI",
+    tag: "Pôle Projets SI",
+    image: poleSi,
+    items: [
+      "Analyse des besoins et cadrage de projet",
+      "Planification et coordination des intervenants",
+      "Déploiement de solutions et d'équipements",
+      "Installation, mise en service et formation",
+      "Suivi post-déploiement, assistance et reporting",
+    ],
+  },
+  {
+    icon: Building2,
+    title: "Management & Administration",
+    tag: "Pôle Management",
+    image: poleManagement,
+    items: [
+      "Formalisation de la gestion des PME",
+      "Organisation administrative et procédures",
+      "Structuration de la gestion financière",
+      "Tableaux de bord et suivi recettes / dépenses",
+      "Digitalisation des processus administratifs",
     ],
   },
   {
@@ -46,9 +75,10 @@ export const poles: readonly Pole[] = [
     image: poleAudit,
     items: [
       "Audit financier et opérationnel",
-      "Comptabilité",
-      "Contrôle interne",
-      "Analyse organisationnelle",
+      "Audit organisationnel et des systèmes d'information",
+      "Conseil en systèmes d'information",
+      "Comptabilité et contrôle interne",
+      "Accompagnement des PME",
     ],
   },
   {
