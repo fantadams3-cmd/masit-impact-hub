@@ -67,9 +67,9 @@ function Services() {
           <p className="mt-3 text-muted-foreground">Nous construisons des solutions sur mesure.</p>
           <Link
             to="/contact"
-            className="mt-6 inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-elegant hover:opacity-90"
+            className="mt-6 inline-flex h-14 items-center gap-2 rounded-md bg-primary px-7 text-base font-semibold text-primary-foreground shadow-elegant hover:opacity-90"
           >
-            Discuter de votre projet <ArrowRight size={16} />
+            Discuter de votre projet <ArrowRight size={18} />
           </Link>
         </div>
       </section>

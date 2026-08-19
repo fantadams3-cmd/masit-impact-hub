@@ -108,9 +108,13 @@
     background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-body);
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+  }
+  button, [type="button"], [type="submit"], [type="reset"] {
+    min-height: 2.75rem;
+    padding-inline: 1.25rem;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);

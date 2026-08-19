@@ -77,15 +77,15 @@ function Contact() {
                 name="message"
                 rows={6}
                 maxLength={2000}
-                className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring resize-none"
+                className="w-full rounded-md border border-input bg-background px-5 py-3.5 text-base outline-none focus:ring-2 focus:ring-ring resize-none"
               />
-              {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
+              {errors.message && <p className="mt-1 text-sm text-destructive">{errors.message}</p>}
             </div>
             <button
               type="submit"
-              className="inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-primary-foreground hover:opacity-90 shadow-elegant"
+              className="inline-flex h-14 items-center gap-2 rounded-md bg-primary px-7 text-base font-semibold text-primary-foreground hover:opacity-90 shadow-elegant"
             >
-              <Send size={16} /> Envoyer le message
+              <Send size={18} /> Envoyer le message
             </button>
             {status === "sent" && (
               <p className="text-sm text-gold">Merci, votre client mail s'ouvre pour finaliser l'envoi.</p>
@@ -122,14 +122,14 @@ function Contact() {
 function Field({ label, name, type = "text", error }: { label: string; name: string; type?: string; error?: string }) {
   return (
     <div>
-      <label className="block text-sm font-medium mb-1.5">{label}</label>
+      <label className="block text-base font-medium mb-1.5">{label}</label>
       <input
         name={name}
         type={type}
         maxLength={255}
-        className="w-full h-11 rounded-md border border-input bg-background px-4 text-sm outline-none focus:ring-2 focus:ring-ring"
+        className="w-full h-12 rounded-md border border-input bg-background px-5 text-base outline-none focus:ring-2 focus:ring-ring"
       />
-      {error && <p className="mt-1 text-xs text-destructive">{error}</p>}
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
     </div>
   );
 }

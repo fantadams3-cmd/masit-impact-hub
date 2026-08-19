@@ -19,13 +19,13 @@ export const Route = createFileRoute("/formations")({
       {
         name: "description",
         content:
-          "Parcours Data Analyst : Excel, SQL, Data Visualisation (Metabase/Tableau) et Python Pandas. Téléchargez notre catalogue PDF.",
+          "Catalogue complet MASIT Consulting : IA, Microsoft Office, SAGE, Odoo ERP, Data Analyst, Développement Web/Mobile et Management. Téléchargez le PDF.",
       },
       { property: "og:title", content: "Catalogue de Formations — MASIT Consulting" },
       {
         property: "og:description",
         content:
-          "4 modules progressifs pour devenir Data Analyst. Programmes, durées et tarifs.",
+          "42+ formations réparties en 7 domaines : IA, Office, SAGE, Odoo, Data, Développement et Management.",
       },
       { property: "og:url", content: "/formations" },
     ],
@@ -127,29 +127,30 @@ function Formations() {
         <div className="relative mx-auto max-w-7xl container-px py-20 md:py-28 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-end">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-xs font-medium text-gold backdrop-blur">
-              <GraduationCap size={14} /> Catalogue 2026
+              <GraduationCap size={14} /> Catalogue complet 2025
             </span>
             <h1 className="mt-6 font-display text-4xl md:text-6xl font-bold leading-[1.05] text-balance">
-              Parcours
+              Catalogue de
               <span className="block bg-gold-gradient bg-clip-text text-transparent">
-                Data Analyst
+                Formations MASIT
               </span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
-              Quatre modules progressifs pensés pour les vrais débutants. De
-              l'Excel maîtrisé jusqu'à Python Pandas — sans brûler les étapes.
+              7 domaines et plus de 40 formations pour renforcer vos équipes :
+              IA, Microsoft Office, SAGE, Odoo ERP, Data Analyst, Développement Web/Mobile et Management.
+              Découvrez ci-dessous notre parcours phare Data Analyst.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="/catalogue-formations-masit.pdf"
                 download
-                className="inline-flex h-12 items-center gap-2 rounded-md bg-gold-gradient px-6 text-sm font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
+                className="inline-flex h-14 items-center gap-2 rounded-md bg-gold-gradient px-7 text-base font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
               >
-                <Download size={16} /> Télécharger le catalogue PDF
+                <Download size={18} /> Télécharger le catalogue PDF
               </a>
               <Link
                 to="/contact"
-                className="inline-flex h-12 items-center rounded-md border border-primary-foreground/30 bg-primary-foreground/10 px-6 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/20 transition backdrop-blur"
+                className="inline-flex h-14 items-center rounded-md border border-primary-foreground/30 bg-primary-foreground/10 px-7 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/20 transition backdrop-blur"
               >
                 S'inscrire à une session
               </Link>
@@ -157,8 +158,8 @@ function Formations() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { k: "4", v: "Modules" },
-              { k: "14", v: "Semaines" },
+              { k: "7", v: "Domaines" },
+              { k: "42+", v: "Formations" },
               { k: "12", v: "Max / groupe" },
               { k: "100%", v: "Pratique" },
             ].map((s) => (
@@ -178,15 +179,15 @@ function Formations() {
       <section className="bg-background">
         <div className="mx-auto max-w-4xl container-px py-16 text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">
-            La bonne progression
+            Parcours phare
           </span>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-balance">
-            Pourquoi cet ordre&nbsp;? Parce que <span className="text-burgundy">l'ordre fait tout.</span>
+            Data Analyst : <span className="text-burgundy">l'ordre fait tout.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Pour un débutant, démarrer par Airflow + AWS, c'est se noyer avant de
-            savoir faire un <code className="px-1.5 py-0.5 rounded bg-muted text-sm">GROUP BY</code>.
-            Notre parcours respecte la logique métier réelle d'un Data Analyst.
+            Parmi les 42+ formations du catalogue MASIT, le parcours Data Analyst reste l'un des plus demandés.
+            Quatre modules progressifs pensés pour les vrais débutants — de l'Excel maîtrisé jusqu'à Python Pandas,
+            sans brûler les étapes.
           </p>
         </div>
       </section>
@@ -250,9 +251,9 @@ function Formations() {
                 </ul>
                 <Link
                   to="/contact"
-                  className="mt-6 inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                  className="mt-6 inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-base font-semibold text-primary-foreground hover:opacity-90"
                 >
-                  Réserver ce module <ArrowRight size={15} />
+                  Réserver ce module <ArrowRight size={16} />
                 </Link>
               </div>
             </article>
@@ -268,17 +269,17 @@ function Formations() {
               Le catalogue complet, au format <span className="text-gold">PDF</span>.
             </h2>
             <p className="mt-3 text-primary-foreground/80 max-w-xl">
-              Programmes détaillés, durées, tarifs, modalités d'inscription —
-              tout dans un document élégant à partager avec votre équipe.
+              IA, Office, SAGE, Odoo, Data, Développement et Management : programmes,
+              durées, tarifs et modalités d'inscription dans un document élégant à partager.
             </p>
           </div>
           <div className="md:justify-self-end">
             <a
               href="/catalogue-formations-masit.pdf"
               download
-              className="inline-flex h-12 items-center gap-2 rounded-md bg-gold-gradient px-7 text-sm font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
+              className="inline-flex h-14 items-center gap-2 rounded-md bg-gold-gradient px-7 text-base font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
             >
-              <Download size={16} /> Télécharger le PDF
+              <Download size={18} /> Télécharger le PDF
             </a>
           </div>
         </div>
