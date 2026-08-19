@@ -19,13 +19,13 @@ export const Route = createFileRoute("/formations")({
       {
         name: "description",
         content:
-          "Parcours Data Analyst : Excel, SQL, Data Visualisation (Metabase/Tableau) et Python Pandas. Téléchargez notre catalogue PDF.",
+          "Catalogue complet MASIT Consulting : IA, Microsoft Office, SAGE, Odoo ERP, Data Analyst, Développement Web/Mobile et Management. Téléchargez le PDF.",
       },
       { property: "og:title", content: "Catalogue de Formations — MASIT Consulting" },
       {
         property: "og:description",
         content:
-          "4 modules progressifs pour devenir Data Analyst. Programmes, durées et tarifs.",
+          "42+ formations réparties en 7 domaines : IA, Office, SAGE, Odoo, Data, Développement et Management.",
       },
       { property: "og:url", content: "/formations" },
     ],
