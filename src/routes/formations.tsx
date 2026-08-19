@@ -251,9 +251,9 @@ function Formations() {
                 </ul>
                 <Link
                   to="/contact"
-                  className="mt-6 inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                  className="mt-6 inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-base font-semibold text-primary-foreground hover:opacity-90"
                 >
-                  Réserver ce module <ArrowRight size={15} />
+                  Réserver ce module <ArrowRight size={16} />
                 </Link>
               </div>
             </article>
