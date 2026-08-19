@@ -41,7 +41,7 @@ export function Header() {
           ))}
           <Link
             to="/contact"
-            className="inline-flex h-10 items-center rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 shadow-card-soft"
+            className="inline-flex h-11 items-center rounded-md bg-primary px-6 text-base font-semibold text-primary-foreground transition-all hover:opacity-90 shadow-card-soft"
           >
             Nous contacter
           </Link>
