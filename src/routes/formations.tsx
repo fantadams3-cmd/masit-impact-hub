@@ -11,6 +11,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
+import { CatalogueBrowser } from "@/components/site/CatalogueBrowser";
 
 export const Route = createFileRoute("/formations")({
   head: () => ({
@@ -175,6 +176,33 @@ function Formations() {
         </div>
       </section>
 
+      {/* CATALOGUE PAR DOMAINE */}
+      <section id="catalogue" className="bg-background">
+        <div className="mx-auto max-w-7xl container-px py-16 md:py-20">
+          <div className="max-w-3xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">
+              Parcourir le catalogue
+            </span>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-balance">
+              Choisissez un domaine, découvrez chaque{" "}
+              <span className="text-burgundy">programme et son tarif.</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Cliquez sur une formation pour afficher son programme détaillé. Chaque domaine
+              propose également une formation personnalisée sur mesure. Les formations sans tarif
+              affiché font l'objet d'un devis : WhatsApp <strong>662 40 05 32</strong> ou{" "}
+              <a href="mailto:cabinetmasit@gmail.com" className="text-burgundy underline">
+                cabinetmasit@gmail.com
+              </a>
+              .
+            </p>
+          </div>
+          <div className="mt-10">
+            <CatalogueBrowser />
+          </div>
+        </div>
+      </section>
+
       {/* INTRO */}
       <section className="bg-background">
         <div className="mx-auto max-w-4xl container-px py-16 text-center">
@@ -191,6 +219,7 @@ function Formations() {
           </p>
         </div>
       </section>
+
 
       {/* MODULES */}
       <section className="bg-fade">
