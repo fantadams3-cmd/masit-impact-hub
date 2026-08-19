@@ -122,14 +122,14 @@ function Contact() {
 function Field({ label, name, type = "text", error }: { label: string; name: string; type?: string; error?: string }) {
   return (
     <div>
-      <label className="block text-sm font-medium mb-1.5">{label}</label>
+      <label className="block text-base font-medium mb-1.5">{label}</label>
       <input
         name={name}
         type={type}
         maxLength={255}
-        className="w-full h-11 rounded-md border border-input bg-background px-4 text-sm outline-none focus:ring-2 focus:ring-ring"
+        className="w-full h-12 rounded-md border border-input bg-background px-5 text-base outline-none focus:ring-2 focus:ring-ring"
       />
-      {error && <p className="mt-1 text-xs text-destructive">{error}</p>}
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
     </div>
   );
 }
