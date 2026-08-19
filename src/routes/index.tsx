@@ -374,9 +374,9 @@ function Home() {
           <div className="md:justify-self-end">
             <Link
               to="/contact"
-              className="inline-flex h-12 items-center gap-2 rounded-md bg-gold-gradient px-7 text-sm font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
+              className="inline-flex h-14 items-center gap-2 rounded-md bg-gold-gradient px-7 text-base font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
             >
-              Démarrer un projet <ArrowRight size={16} />
+              Démarrer un projet <ArrowRight size={18} />
             </Link>
           </div>
         </div>
