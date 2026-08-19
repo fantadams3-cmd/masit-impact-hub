@@ -127,29 +127,30 @@ function Formations() {
         <div className="relative mx-auto max-w-7xl container-px py-20 md:py-28 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-end">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-xs font-medium text-gold backdrop-blur">
-              <GraduationCap size={14} /> Catalogue 2026
+              <GraduationCap size={14} /> Catalogue complet 2025
             </span>
             <h1 className="mt-6 font-display text-4xl md:text-6xl font-bold leading-[1.05] text-balance">
-              Parcours
+              Catalogue de
               <span className="block bg-gold-gradient bg-clip-text text-transparent">
-                Data Analyst
+                Formations MASIT
               </span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
-              Quatre modules progressifs pensés pour les vrais débutants. De
-              l'Excel maîtrisé jusqu'à Python Pandas — sans brûler les étapes.
+              7 domaines et plus de 40 formations pour renforcer vos équipes :
+              IA, Microsoft Office, SAGE, Odoo ERP, Data Analyst, Développement Web/Mobile et Management.
+              Découvrez ci-dessous notre parcours phare Data Analyst.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="/catalogue-formations-masit.pdf"
                 download
-                className="inline-flex h-12 items-center gap-2 rounded-md bg-gold-gradient px-6 text-sm font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
+                className="inline-flex h-14 items-center gap-2 rounded-md bg-gold-gradient px-7 text-base font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
               >
-                <Download size={16} /> Télécharger le catalogue PDF
+                <Download size={18} /> Télécharger le catalogue PDF
               </a>
               <Link
                 to="/contact"
-                className="inline-flex h-12 items-center rounded-md border border-primary-foreground/30 bg-primary-foreground/10 px-6 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/20 transition backdrop-blur"
+                className="inline-flex h-14 items-center rounded-md border border-primary-foreground/30 bg-primary-foreground/10 px-7 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/20 transition backdrop-blur"
               >
                 S'inscrire à une session
               </Link>
@@ -157,8 +158,8 @@ function Formations() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { k: "4", v: "Modules" },
-              { k: "14", v: "Semaines" },
+              { k: "7", v: "Domaines" },
+              { k: "42+", v: "Formations" },
               { k: "12", v: "Max / groupe" },
               { k: "100%", v: "Pratique" },
             ].map((s) => (
