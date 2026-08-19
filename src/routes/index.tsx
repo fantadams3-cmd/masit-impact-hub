@@ -96,13 +96,13 @@ function Home() {
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
                 to="/contact"
-                className="inline-flex h-12 items-center gap-2 rounded-md bg-gold-gradient px-6 text-sm font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
+                className="inline-flex h-14 items-center gap-2 rounded-md bg-gold-gradient px-7 text-base font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
               >
-                Nous contacter <ArrowRight size={16} />
+                Nous contacter <ArrowRight size={18} />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex h-12 items-center rounded-md border border-primary-foreground/30 bg-primary-foreground/10 px-6 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/20 transition backdrop-blur"
+                className="inline-flex h-14 items-center rounded-md border border-primary-foreground/30 bg-primary-foreground/10 px-7 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/20 transition backdrop-blur"
               >
                 Découvrir nos services
               </Link>
