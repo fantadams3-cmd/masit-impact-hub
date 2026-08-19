@@ -179,15 +179,15 @@ function Formations() {
       <section className="bg-background">
         <div className="mx-auto max-w-4xl container-px py-16 text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">
-            La bonne progression
+            Parcours phare
           </span>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-balance">
-            Pourquoi cet ordre&nbsp;? Parce que <span className="text-burgundy">l'ordre fait tout.</span>
+            Data Analyst : <span className="text-burgundy">l'ordre fait tout.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Pour un débutant, démarrer par Airflow + AWS, c'est se noyer avant de
-            savoir faire un <code className="px-1.5 py-0.5 rounded bg-muted text-sm">GROUP BY</code>.
-            Notre parcours respecte la logique métier réelle d'un Data Analyst.
+            Parmi les 42+ formations du catalogue MASIT, le parcours Data Analyst reste l'un des plus demandés.
+            Quatre modules progressifs pensés pour les vrais débutants — de l'Excel maîtrisé jusqu'à Python Pandas,
+            sans brûler les étapes.
           </p>
         </div>
       </section>
