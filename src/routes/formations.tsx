@@ -269,17 +269,17 @@ function Formations() {
               Le catalogue complet, au format <span className="text-gold">PDF</span>.
             </h2>
             <p className="mt-3 text-primary-foreground/80 max-w-xl">
-              Programmes détaillés, durées, tarifs, modalités d'inscription —
-              tout dans un document élégant à partager avec votre équipe.
+              IA, Office, SAGE, Odoo, Data, Développement et Management : programmes,
+              durées, tarifs et modalités d'inscription dans un document élégant à partager.
             </p>
           </div>
           <div className="md:justify-self-end">
             <a
               href="/catalogue-formations-masit.pdf"
               download
-              className="inline-flex h-12 items-center gap-2 rounded-md bg-gold-gradient px-7 text-sm font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
+              className="inline-flex h-14 items-center gap-2 rounded-md bg-gold-gradient px-7 text-base font-semibold text-gold-foreground shadow-gold hover:opacity-95 transition"
             >
-              <Download size={16} /> Télécharger le PDF
+              <Download size={18} /> Télécharger le PDF
             </a>
           </div>
         </div>
