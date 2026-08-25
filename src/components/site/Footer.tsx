@@ -37,7 +37,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="mx-auto max-w-7xl container-px py-5 text-xs text-primary-foreground/60 flex flex-wrap gap-2 justify-between">
           <span>© {new Date().getFullYear()} MASIT Consulting. Tous droits réservés.</span>
-          <span>Conakry · Guinée</span>
+          <span>Maison blanche,Sangoya,Commune de Matoto</span>
         </div>
       </div>
     </footer>
