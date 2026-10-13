@@ -1,67 +1,80 @@
-import { Brain, Code2, GraduationCap, ClipboardCheck, Briefcase, Network, Building2 } from "lucide-react";
+import { Brain, Code2, GraduationCap, ClipboardCheck, Users } from "lucide-react";
 import poleAi from "@/assets/pole-ai.jpg";
 import poleTech from "@/assets/pole-tech.jpg";
 import poleFormation from "@/assets/pole-formation.jpg";
 import poleAudit from "@/assets/pole-audit.jpg";
-import poleConseil from "@/assets/pole-conseil.jpg";
-import poleSi from "@/assets/pole-si.jpg";
-import poleManagement from "@/assets/pole-management.jpg";
+import poleRh from "@/assets/pole-rh.jpg";
 
 type Pole = {
   icon: typeof Code2;
   title: string;
   tag: string;
   image: string;
-  href?: string;
+  href?: "/formations" | "/conseil-business";
+  description: string;
   items: readonly string[];
 };
 
 export const poles: readonly Pole[] = [
   {
     icon: Code2,
-    title: "Solutions numériques & Applications",
-    tag: "Pôle Tech",
+    title: "Numérique et solutions technologiques",
+    tag: "Numérique",
     image: poleTech,
+    description: "Des outils innovants pour une entreprise plus performante.",
     items: [
       "Applications web, mobiles et desktop",
       "Applications métiers et logiciels de gestion",
       "Bases de données, automatisation des processus",
       "Tableaux de bord et reporting",
       "Sites web et transformation digitale",
+      "Appui et déploiement de projets SI",
     ],
   },
   {
-    icon: Network,
-    title: "Appui & Déploiement de Projets SI",
-    tag: "Pôle Projets SI",
-    image: poleSi,
+    icon: GraduationCap,
+    title: "Formation professionnelle et logiciels métiers",
+    tag: "Formation",
+    image: poleFormation,
+    href: "/formations",
+    description: "Développez les compétences de vos équipes.",
     items: [
-      "Analyse des besoins et cadrage de projet",
-      "Planification et coordination des intervenants",
-      "Déploiement de solutions et d'équipements",
-      "Installation, mise en service et formation",
-      "Suivi post-déploiement, assistance et reporting",
+      "Bureautique, Microsoft Office et Google Workspace",
+      "Logiciels métiers : SAGE et Odoo ERP",
+      "Data Analyst, Business Intelligence et IA",
+      "Développement web et mobile",
+      "Management et renforcement des capacités",
+      "Formations personnalisées sur mesure",
     ],
   },
   {
-    icon: Building2,
-    title: "Management & Administration",
-    tag: "Pôle Management",
-    image: poleManagement,
+    icon: ClipboardCheck,
+    title: "Audit contractuel, conseil en organisation et gestion des PME",
+    tag: "Audit & Conseil",
+    image: poleAudit,
+    href: "/conseil-business",
+    description: "Optimisez vos processus, renforcez votre performance.",
     items: [
       "Formalisation de la gestion des PME",
       "Organisation administrative et procédures",
       "Structuration de la gestion financière",
       "Tableaux de bord et suivi recettes / dépenses",
       "Digitalisation des processus administratifs",
+      "Audit contractuel, financier et opérationnel",
+      "Audit organisationnel et des systèmes d'information",
+      "Diagnostic et accompagnement des organisations",
+      "Études de marché et développement d'activité",
     ],
   },
   {
     icon: Brain,
-    title: "Intelligence Artificielle",
-    tag: "Pôle IA",
+    title: "Data, Business Intelligence et IA",
+    tag: "Data & IA",
     image: poleAi,
+    description: "Transformez vos données en décisions stratégiques.",
     items: [
+      "Analyse et valorisation des données",
+      "Tableaux de bord et Business Intelligence",
       "AI for Education",
       "Automatisation des processus",
       "Solutions IA pour entreprises",
@@ -69,41 +82,15 @@ export const poles: readonly Pole[] = [
     ],
   },
   {
-    icon: ClipboardCheck,
-    title: "Audit & Gestion",
-    tag: "Pôle Audit",
-    image: poleAudit,
+    icon: Users,
+    title: "Intérim, recrutement et gestion de la paie",
+    tag: "Ressources humaines",
+    image: poleRh,
+    description: "Les talents pour vos projets, au bon moment.",
     items: [
-      "Audit financier et opérationnel",
-      "Audit organisationnel et des systèmes d'information",
-      "Conseil en systèmes d'information",
-      "Comptabilité et contrôle interne",
-      "Accompagnement des PME",
-    ],
-  },
-  {
-    icon: Briefcase,
-    title: "Conseil & Business",
-    tag: "Pôle Conseil",
-    image: poleConseil,
-    href: "/conseil-business",
-    items: [
-      "Études de marché (Market Research)",
-      "Business Development",
-      "Project Implementation",
-      "Accompagnement PME / ONG / écoles",
-    ],
-  },
-  {
-    icon: GraduationCap,
-    title: "Formation",
-    tag: "Pôle Formation",
-    image: poleFormation,
-    items: [
-      "Google Workspace",
-      "Bureautique et productivité",
-      "IA et outils numériques",
-      "Renforcement de capacités",
+      "Intérim et mise à disposition de personnel",
+      "Recrutement adapté aux besoins de votre organisation",
+      "Gestion de la paie",
     ],
   },
 ];

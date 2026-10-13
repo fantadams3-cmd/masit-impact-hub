@@ -10,6 +10,8 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "MASIT Consulting accompagne la transformation digitale en Afrique. Notre mission, notre vision et nos valeurs." },
       { property: "og:title", content: "À propos — MASIT Consulting" },
       { property: "og:description", content: "Notre mission, notre vision et nos valeurs." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -36,7 +38,10 @@ function About() {
           <p className="mt-6 max-w-2xl text-primary-foreground/80">
             MASIT Consulting est un cabinet de conseil basé à Conakry. Nous accompagnons entreprises,
             ONG, écoles et institutions publiques dans leur performance et leur transformation
-            digitale, avec une expertise transverse en IA, audit, formation et business.
+            digitale, avec cinq domaines d’expertise : numérique et solutions technologiques,
+            formation professionnelle et logiciels métiers, audit contractuel et conseil en
+            organisation et gestion des PME, Data, Business Intelligence et IA,
+            intérim, recrutement et gestion de la paie.
           </p>
         </div>
       </section>

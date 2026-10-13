@@ -29,6 +29,8 @@ export const Route = createFileRoute("/formations")({
           "42+ formations réparties en 7 domaines : IA, Office, SAGE, Odoo, Data, Développement et Management.",
       },
       { property: "og:url", content: "/formations" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/formations" }],
   }),

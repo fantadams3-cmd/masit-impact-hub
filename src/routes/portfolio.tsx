@@ -8,6 +8,8 @@ export const Route = createFileRoute("/portfolio")({
       { name: "description", content: "Projets d'audit, formations, solutions IA et plateformes digitales livrées par MASIT Consulting." },
       { property: "og:title", content: "Réalisations — MASIT Consulting" },
       { property: "og:description", content: "Aperçu de nos projets et missions récentes." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/portfolio" },
     ],
     links: [{ rel: "canonical", href: "/portfolio" }],

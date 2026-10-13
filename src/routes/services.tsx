@@ -7,9 +7,11 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — MASIT Consulting" },
-      { name: "description", content: "IA, développement web, formation, audit & comptabilité, conseil stratégique : découvrez l'ensemble de nos services." },
+      { name: "description", content: "Découvrez les cinq domaines MASIT : numérique, formation et logiciels métiers, audit contractuel et gestion des PME, Data et IA, intérim, recrutement et paie." },
       { property: "og:title", content: "Services — MASIT Consulting" },
-      { property: "og:description", content: "IA, digital, audit, formation, conseil — toutes nos expertises." },
+      { property: "og:description", content: "Solutions technologiques, formation, audit et conseil, Data et IA, ressources humaines : notre offre actuelle." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -27,14 +29,15 @@ function Services() {
             Une offre intégrée pour transformer votre organisation
           </h1>
           <p className="mt-6 max-w-2xl text-primary-foreground/80">
-            Sept pôles complémentaires — systèmes d’information, projets SI, management, applications, IA, audit et formation — mobilisés individuellement ou en synergie selon vos enjeux.
+            Cinq domaines complémentaires — numérique, formation, audit et conseil, Data et IA,
+            intérim et ressources humaines — mobilisés individuellement ou en synergie selon vos enjeux.
           </p>
         </div>
       </section>
 
       <section className="bg-background">
         <div className="mx-auto max-w-7xl container-px py-20 md:py-24 space-y-8">
-          {poles.map(({ icon: Icon, title, tag, items }, idx) => (
+          {poles.map(({ icon: Icon, title, tag, items, description, href }, idx) => (
             <article
               key={title}
               className="grid gap-8 rounded-2xl border border-border bg-card p-8 md:p-12 shadow-card-soft md:grid-cols-[1fr_1.5fr] items-start"
@@ -47,6 +50,12 @@ function Services() {
                   <Icon size={26} />
                 </div>
                 <h2 className="mt-5 font-display text-2xl md:text-3xl font-bold">{title}</h2>
+                <p className="mt-4 text-base text-muted-foreground">{description}</p>
+                {href && (
+                  <Link to={href} className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-burgundy hover:underline">
+                    {href === "/formations" ? "Parcourir les formations" : "Découvrir nos missions"} <ArrowRight size={16} />
+                  </Link>
+                )}
               </div>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {items.map((i) => (
