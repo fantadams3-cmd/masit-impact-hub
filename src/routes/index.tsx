@@ -10,11 +10,12 @@ import { poles } from "@/components/site/data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MASIT Consulting — Systèmes d’information, digital & gestion" },
-      { name: "description", content: "Cabinet de conseil à Conakry : systèmes d’information, déploiement de projets SI, applications, digitalisation, IA, gestion des PME et formation." },
-      { property: "og:title", content: "MASIT Consulting — Digital, IA, Audit & Formation" },
-      { property: "og:description", content: "Accompagner les organisations dans leur transformation digitale et leur performance." },
-      { property: "og:image", content: heroImg },
+      { title: "MASIT Consulting — Numérique, formation, audit, Data & RH" },
+      { name: "description", content: "À Conakry : solutions numériques, formation professionnelle, audit contractuel, gestion des PME, Data, Business Intelligence, IA, intérim, recrutement et paie." },
+      { property: "og:title", content: "MASIT Consulting — Des solutions aujourd’hui, pour une performance durable" },
+      { property: "og:description", content: "Cinq domaines d’expertise : numérique, formation, audit et conseil, Data et IA, ressources humaines." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -81,17 +82,16 @@ function Home() {
         <div className="relative mx-auto max-w-7xl container-px py-20 md:py-28 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
           <div className="text-primary-foreground">
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/15 px-3 py-1 text-xs font-medium text-gold backdrop-blur">
-              <Sparkles size={14} /> Conseil, systèmes d'information & accompagnement · Conakry
+              <Sparkles size={14} /> Des talents, des solutions, des impacts durables · Conakry
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] text-balance md:text-6xl">
-              Des solutions numériques et des systèmes d'information
-              <span className="block bg-gold-gradient bg-clip-text text-transparent">au service de votre performance</span>
+              Des solutions aujourd’hui,
+              <span className="block bg-gold-gradient bg-clip-text text-transparent">pour une performance durable.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-primary-foreground/85 text-balance">
-              Nous accompagnons les entreprises et organisations dans leurs
-              <span className="text-gold font-semibold"> projets numériques</span>, leurs
-              <span className="text-gold font-semibold"> systèmes d'information</span>, leur
-              <span className="text-gold font-semibold"> gestion</span> et le développement des compétences.
+              Numérique, formation, audit et conseil, Data et IA, ressources humaines :
+              nous accompagnons vos équipes, votre organisation et vos projets
+              pour une performance durable.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
@@ -109,7 +109,7 @@ function Home() {
             </div>
             <div className="mt-12 grid grid-cols-3 max-w-xl gap-6 border-t border-primary-foreground/15 pt-8">
               {[
-                { k: "7", v: "Pôles d'expertise" },
+                { k: String(poles.length), v: "Domaines d'expertise" },
                 { k: "50+", v: "Projets accompagnés" },
                 { k: "100%", v: "Engagement client" },
               ].map((s) => (
@@ -173,7 +173,7 @@ function Home() {
           <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">Nos pôles d'expertise</span>
             <h2 className="mt-3 font-display text-3xl font-bold md:text-5xl text-balance">
-              Digital · Systèmes d'information · Gestion · IA · Formation :
+              Numérique · Formation · Audit · Data & IA · Ressources humaines :
               <span className="text-burgundy"> une exigence</span>, la performance de nos clients
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -182,10 +182,10 @@ function Home() {
             </p>
           </div>
           <div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {poles.map(({ icon: Icon, title, tag, items, image, href }) => {
+            {poles.map(({ icon: Icon, title, tag, items, image, href, description }) => {
               const card = (
                 <>
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <div className="relative aspect-[16/10] overflow-hidden">
                     <img
                       src={image}
                       alt={title}
@@ -200,15 +200,18 @@ function Home() {
                     </div>
                     {href && (
                       <div className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-gold-gradient px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-gold-foreground shadow-gold">
-                        Voir nos références <ArrowRight size={12} />
+                        {href === "/formations" ? "Voir les formations" : "Voir nos références"} <ArrowRight size={12} />
                       </div>
                     )}
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+                    <div className="absolute bottom-4 left-4 right-4">
                       <div className="grid h-11 w-11 place-items-center rounded-lg bg-gold-gradient text-gold-foreground shadow-gold">
                         <Icon size={20} />
                       </div>
-                      <h3 className="font-display text-xl font-bold text-primary-foreground">{title}</h3>
                     </div>
+                  </div>
+                  <div className="px-6 pt-6">
+                    <h3 className="font-display text-xl font-bold">{title}</h3>
+                    <p className="mt-3 text-base text-burgundy">{description}</p>
                   </div>
                   <ul className="p-6 space-y-2.5 text-sm text-muted-foreground">
                     {items.map((i) => (
@@ -223,7 +226,7 @@ function Home() {
               const className =
                 "group relative overflow-hidden rounded-2xl border border-border bg-card shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant";
               return href ? (
-                <Link key={title} to={href as "/"} className={className}>
+                <Link key={title} to={href} className={className}>
                   {card}
                 </Link>
               ) : (
@@ -307,7 +310,7 @@ function Home() {
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Notre approche</span>
             <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-balance">
-              Une expertise terrain, des résultats mesurables.
+              Pourquoi nous choisir ?
             </h2>
             <p className="mt-5 text-primary-foreground/80 leading-relaxed">
               Nous combinons les standards internationaux du conseil avec une connaissance fine du
@@ -316,9 +319,10 @@ function Home() {
             </p>
             <div className="mt-8 space-y-4">
               {[
-                "Méthodes éprouvées et benchmarks internationaux",
-                "Équipes pluridisciplinaires basées à Conakry",
-                "Livrables exécutables, pas de présentations creuses",
+                "Expertise",
+                "Solutions sur mesure",
+                "Résultats durables",
+                "Proximité",
               ].map((t) => (
                 <div key={t} className="flex items-start gap-3">
                   <CheckCircle2 size={18} className="text-gold mt-0.5 shrink-0" />
