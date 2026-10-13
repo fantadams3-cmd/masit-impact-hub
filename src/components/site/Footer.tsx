@@ -12,8 +12,9 @@ export function Footer() {
             <span className="font-display text-base font-bold">MASIT CONSULTING</span>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/70">
-            Cabinet de conseil, audit, formation et transformation digitale basé à Conakry, Guinée.
-            Nous accompagnons les organisations dans leur performance et leur transition vers l'IA.
+            Numérique, formation professionnelle, audit et conseil, Data et IA,
+            intérim, recrutement et gestion de la paie à Conakry, Guinée.
+            Des solutions aujourd’hui, pour une performance durable.
           </p>
         </div>
         <div>

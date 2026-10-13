@@ -11,6 +11,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contactez MASIT Consulting à Conakry : formulaire, email, WhatsApp. Réponse sous 24h ouvrées." },
       { property: "og:title", content: "Contact — MASIT Consulting" },
       { property: "og:description", content: "Parlons de votre projet." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],

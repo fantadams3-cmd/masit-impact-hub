@@ -171,7 +171,7 @@ function Home() {
       <section className="relative">
         <div className="mx-auto max-w-7xl container-px py-20 md:py-28">
           <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">Nos pôles d'expertise</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">Nos domaines d'expertise</span>
             <h2 className="mt-3 font-display text-3xl font-bold md:text-5xl text-balance">
               Numérique · Formation · Audit · Data & IA · Ressources humaines :
               <span className="text-burgundy"> une exigence</span>, la performance de nos clients
